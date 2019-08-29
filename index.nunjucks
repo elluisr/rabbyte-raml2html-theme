@@ -51,36 +51,39 @@
 		<div class="main-content">
 
 			<!-- intro section -->
-			<article class="section section--separated" id="intro">
-				<div class="section__content container container--content">
-					<div class="rtc rtc--final">
-						<h1 class="rtc__title">{{ title }} <span class="version">v{{ version }}</span></h1>
+			<section id="intro-section">
+				<article class="section section--separated" id="intro">
+					<div class="section__content container container--content">
+						<div class="rtc rtc--final">
+							<h1 class="rtc__title">{{ title }} <span class="version">v{{ version }}</span></h1>
 
-						{% if description %}
-						<div class="rtc__description">
-							{% markdown %} {{ description }} {% endmarkdown %}
+							{% if description %}
+							<div class="rtc__description">
+								{% markdown %} {{ description }} {% endmarkdown %}
+							</div>
+							{% endif %}
+
+							<p class="rtc__base-uri">
+								<span class="rtc__base-uri__icon"><i title="URL" class="material-icons">link</i></span>
+								<a class="rtc__base-uri__link" href="{{ baseUri }}" target="_blank">{{ baseUri }}</a>
+							</p>
 						</div>
+
+						{% if baseUriParameters %}
+						<h2 class="rtc__subtitle">Path Parameters</h2>
+
+						<table class="table">
+							{{ partials.paramsHeader() }}
+							{{ partials.paramsBody(baseUriParameters, types) }}
+						</table>
 						{% endif %}
-
-						<p class="rtc__base-uri">
-							<span class="rtc__base-uri__icon"><i title="URL" class="material-icons">link</i></span>
-							<a class="rtc__base-uri__link" href="{{ baseUri }}" target="_blank">{{ baseUri }}</a>
-						</p>
 					</div>
-
-					{% if baseUriParameters %}
-					<h2 class="rtc__subtitle">Path Parameters</h2>
-
-					<table class="table">
-						{{ partials.paramsHeader() }}
-						{{ partials.paramsBody(baseUriParameters, types) }}
-					</table>
-					{% endif %}
-				</div>
-				<div class="section__sidecode"></div>
-			</article>
+					<div class="section__sidecode"></div>
+				</article>
+			</section>
 
 			<!-- user documentation -->
+			<section id="documentation-section">
 			{% for chapter in documentation %}
 			<article class="section section--separated" id="chapter:{{ chapter.uniqueId }}">
 				<div class="section__content container container--content rtc rtc--final">
@@ -90,9 +93,10 @@
 				<div class="section__sidecode"></div>
 			</article>
 			{% endfor %}
+			</section>
 
 			<!-- resources -->
-			<section>
+			<section id="resources-section">
 				<header class="section" id="resources">
 					<div class="section__content container container--content rtc rtc--final">
 						<h2 class="rtc__title">Resources</h2>
@@ -107,7 +111,7 @@
 			</section>
 
 			<!-- security schemes -->
-			<section>
+			<section id="security-schemes-section">
 				<header class="section" id="security-schemes">
 					<div class="section__content container container--content rtc rtc--final">
 						<h2 class="rtc__title">Security Schemes</h2>
@@ -120,7 +124,7 @@
 			</section>
 
 			<!-- types -->
-			<section>
+			<section id="#types-section">
 				<header class="section" id="types">
 					<div class="section__content container container--content rtc rtc--final">
 						<h2 class="rtc__title">Types</h2>
