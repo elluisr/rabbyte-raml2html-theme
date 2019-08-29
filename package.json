@@ -4,10 +4,7 @@
   "description": "Rabbyte theme for raml2html utility.",
   "main": "index.js",
   "scripts": {
-    "build": "cat ./scss/main.scss | node-sass > ./dist/style.css",
-    "test": "raml2html -v --template ./index.nunjucks -i ./demo/raml-examples/others/world-music-api/api.raml -o ./demo/api.html",
-    "test:w": "watch -p \"/dist/\" -p \"/demo/\" \"npm run build-sass && npm run test\" ./",
-    "prepublish": "npm run build"
+    "build": "echo builded"
   },
   "author": {
     "name": "Luis Rodrigues",
