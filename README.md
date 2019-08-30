@@ -1,9 +1,9 @@
 # Rabbyte theme raml2html ![version](https://img.shields.io/badge/version-1.1.4-green.svg)
 
-![Screenshot 1](https://github.com/elluisr/rabbyte-raml2html-theme/tree/master/demo/screenshot_1.png)
-![Screenshot 2](https://github.com/elluisr/rabbyte-raml2html-theme/tree/master/demo/screenshot_2.png)
-![Screenshot 3](https://github.com/elluisr/rabbyte-raml2html-theme/tree/master/demo/screenshot_3.png)
-![Screenshot 4](https://github.com/elluisr/rabbyte-raml2html-theme/tree/master/demo/screenshot_4.png)
+![Screenshot 1](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_1.png)
+![Screenshot 2](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_2.png)
+![Screenshot 3](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_3.png)
+![Screenshot 4](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_4.png)
 
 ## License
 
