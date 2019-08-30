@@ -2,9 +2,19 @@
 
 ![Screenshot 1](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_1.png)
 
+#### DEMO Available here https://elluisr.github.io/rabbyte-demo/ 
+------------
+
 > ### Features
 - Search for resources and types:
 ![Gif 1](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/search_gif.gif)
+
+Installation
+------------
+
+```bash
+$ npm i raml2html-rabbyte-theme
+```
 
 ## License
 
