@@ -1,5 +1,5 @@
 {% macro navFinalItem(link, label, level, modifier, class) %}
-	<li class="nav-tree__item nav-tree__item--final nav-tree__item--level-{{ level }} {% if modifier %}nav-tree__item--{{ modifier }}{% endif %} {{class}}">
+	<li class="nav-tree__item nav-tree__item--final nav-tree__item--level-{{ level }} {% if modifier %}nav-tree__item--{{ modifier }}{% endif %} {{class}}" value="{{label}}">
 		<a class="nav-tree__item__label final" href="{{ link }}">
 			<span class="label">{{ label }}</span>
 		</a>
@@ -27,7 +27,7 @@
     {% endfor %}
 
 	{% if skip == false or level == 1 %}
-		<li class="nav-tree__item nav-tree__item--level-{{ level }} {% if not expand %}nav-tree__item--collapsed{% endif %}">
+		<li class="nav-tree__item nav-tree__item--level-{{ level }} {% if not expand %}nav-tree__item--collapsed{% endif %}" value="{{resource.displayName}}">
 			{{ navGroupItem(resource.displayName) }}
 			{% if resource.methods.length or resource.resources.length %}
 			<ul class="nav-tree">

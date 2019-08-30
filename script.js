@@ -7,7 +7,7 @@ var searchbar;
 
 function bindNavToggle() {
   function bindItem(el) {
-    el.addEventListener("click", function() {
+    el.addEventListener("click", function () {
       el.parentElement.classList.toggle("nav-tree__item--collapsed");
     });
   }
@@ -22,7 +22,7 @@ function bindNavToggle() {
  */
 function bindCollapsibles() {
   function bindItem(el) {
-    el.addEventListener("click", function() {
+    el.addEventListener("click", function () {
       const targetId = el.getAttribute("data-target");
       const targetEl = document.getElementById(targetId);
 
@@ -68,7 +68,7 @@ function bindTabs() {
     }
 
     function bindLink(linkEl) {
-      linkEl.addEventListener("click", function(ev) {
+      linkEl.addEventListener("click", function (ev) {
         ev.preventDefault();
         activateTab(linkEl);
         return false;
@@ -120,7 +120,7 @@ function bindFilters() {
     bindFilterOption(filterOptEls.item(i));
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   createReferences();
 
   onSearch();
@@ -139,7 +139,13 @@ function createReferences() {
   searchbar = $("#searchbar");
 }
 
-function rebuildMain({ intro, resources, doc, types, schemes }) {
+function rebuildMain({
+  intro,
+  resources,
+  doc,
+  types,
+  schemes
+}) {
   if (intro) {
     intro_section.show();
   } else {
@@ -172,29 +178,34 @@ function rebuildMain({ intro, resources, doc, types, schemes }) {
 }
 
 function onSearch() {
-  searchbar.keyup(function(event) {
+  searchbar.keyup(function (event) {
     let value = searchbar.val();
 
-    $(".nav-tree__item__label").each(function(index) {
-      let urlNames = $(this)
-        .text()
-        .split(" ");
+    $(".nav-tree__item ").each(function (index) {
+      let urlNames = $(this).attr("value");
 
-      let hasMethod = urlNames.length === 1;
-
-      let optionName = hasMethod ? urlNames[0] : urlNames[2];
-
-      if (optionName.toUpperCase().indexOf(value.toUpperCase()) != -1) {
+      if (
+        urlNames &&
+        urlNames.toUpperCase().indexOf(value.toUpperCase()) != -1
+      ) {
         $(this).show();
       } else {
-        $(this).hide();
+        let types;
+        let level = $(this).attr("class");
+        types = level.split(" ")[3];
+        level = level.split(" ")[1];
+        level = level[level.length - 1];
+
+        if (types) types = types.substring(types.length - 5);
+
+        if (level === "1" || types === "types") $(this).hide();
       }
     });
   });
 }
 
 function onSelectResource() {
-  $(".nav-tree__item__label").click(function(event) {
+  $(".nav-tree__item__label").click(function (event) {
     let url_value = $(this).attr("href");
 
     if (url_value === undefined) {
@@ -209,12 +220,12 @@ function onSelectResource() {
 
     url_value = url_value[1].split(":");
 
-    $(".record").each(function(index) {
+    $(".record").each(function (index) {
       if (
         $(this)
-          .text()
-          .split(" ")[1]
-          .indexOf("/" + url_value[0]) != -1
+        .text()
+        .split(" ")[1]
+        .indexOf("/" + url_value[0]) != -1
       ) {
         $(this).show();
       } else {
@@ -232,17 +243,17 @@ function onSelectResource() {
 }
 
 function onSelectType() {
-  $(".nav-tree__item--nav-bar-types").click(function(event) {
+  $(".nav-tree__item--nav-bar-types").click(function (event) {
     let url_value = $(this).text();
 
     console.log(url_value);
 
-    $(".record").each(function(index) {
+    $(".record").each(function (index) {
       if (
         $(this)
-          .text()
-          .split(" ")[1]
-          .indexOf(url_value) != -1
+        .text()
+        .split(" ")[1]
+        .indexOf(url_value) != -1
       ) {
         $(this).show();
       } else {
@@ -259,7 +270,7 @@ function onSelectType() {
   });
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   bindNavToggle();
   bindCollapsibles();
   bindTabs();
