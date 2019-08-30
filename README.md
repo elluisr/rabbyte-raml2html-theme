@@ -1,8 +1,8 @@
-# Rabbyte theme raml2html ![version](https://img.shields.io/badge/version-1.2.0-green.svg)
+# Rabbyte theme raml2html ![version](https://img.shields.io/badge/version-1.2.3-green.svg)
 
 ![Screenshot 1](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_1.png)
 
-#### DEMO Available here https://elluisr.github.io/rabbyte-demo/ 
+#### DEMO Available here https://elluisr.github.io/rabbyte-raml2html-demo/
 ------------
 
 > ### Features
