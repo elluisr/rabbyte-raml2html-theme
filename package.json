@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elluisr/raml2html-rabbyte-theme.git"
+    "url": "git+https://github.com/elluisr/rabbyte-raml2html-theme.git"
   },
-  "homepage": "https://github.com/elluisr/raml2html-rabbyte-theme#readme",
+  "homepage": "https://github.com/elluisr/rabbyte-raml2html-theme#readme",
   "keywords": [
     "raml",
     "raml2html",
