@@ -3,7 +3,7 @@
 ![Screenshot 1](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/screenshot_1.png)
 
 > ### Features
-- Search by resources and types:
+- Search for resources and types:
 ![Gif 1](https://github.com/elluisr/rabbyte-raml2html-theme/raw/master/demo/search_gif.gif)
 
 ## License
