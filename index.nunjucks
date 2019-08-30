@@ -124,7 +124,7 @@
 			</section>
 
 			<!-- types -->
-			<section id="#types-section">
+			<section id="types-section">
 				<header class="section" id="types">
 					<div class="section__content container container--content rtc rtc--final">
 						<h2 class="rtc__title">Types</h2>

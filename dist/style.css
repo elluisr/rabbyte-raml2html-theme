@@ -4,7 +4,7 @@
 /*
  * General
  */
-* {
+ * {
   margin: 0px;
   padding: 0px; }
 
@@ -19,7 +19,7 @@ code {
   font-family: "Fira Mono", monospace; }
 
 a {
-  color: #1E88E5;
+  color: #f99300;
   text-decoration: underline; }
 
 a:hover {
@@ -111,7 +111,7 @@ a:hover {
     user-select: none; }
     .nav-tree__item__label:hover {
       background: #eff7fd;
-      border-color: #2196F3; }
+      border-color: #f99300; }
     .nav-tree__item__label--togglable {
       cursor: pointer; }
     .nav-tree__item__label__name {
@@ -124,7 +124,7 @@ a:hover {
       margin-right: 5px; }
   .nav-tree__item--method-get .nav-tree__item__label::before {
     content: '';
-    background-color: #1E88E5; }
+    background-color: #f99300; }
   .nav-tree__item--method-post .nav-tree__item__label::before {
     content: '';
     background-color: #009688; }
@@ -282,7 +282,7 @@ a:hover {
   user-select: none;
   transition: color 0.3s; }
   .collapsible__toggler:hover {
-    color: #1E88E5; }
+    color: #f99300; }
 
 .collapsible--when-not-collapsed {
   display: inline-block; }
@@ -461,7 +461,7 @@ a:hover {
       padding: 16px 40px;
       color: #ffffff; }
   .record--method-get .record__header__title {
-    background-color: #1E88E5; }
+    background-color: #f99300; }
   .record--method-post .record__header__title {
     background-color: #009688; }
   .record--method-put .record__header__title {
@@ -528,7 +528,7 @@ a:hover {
       .record__secured-by__title__display-name {
         color: #000000; }
       .record__secured-by__title__name {
-        color: #1E88E5;
+        color: #f99300;
         text-decoration: underline;
         font-weight: 400;
         font-style: italic; }
@@ -614,7 +614,7 @@ a:hover {
 
 .record--method-get .tabs__item--active a,
 .record--method-get .tabs__item--active a:hover {
-  border-color: #1E88E5; }
+  border-color: #f99300; }
 
 .record--method-post .tabs__item--active a,
 .record--method-post .tabs__item--active a:hover {
@@ -756,7 +756,7 @@ a:hover {
   padding-top: 0; }
 
 .property a {
-  color: #1E88E5;
+  color: #f99300;
   text-decoration: underline; }
 
 .property a:hover {
@@ -843,7 +843,7 @@ a:hover {
   font-style: italic; }
 
 a .type__name {
-  color: #1E88E5;
+  color: #f99300;
   text-decoration: underline; }
 
 a:hover .type__name {
@@ -864,8 +864,8 @@ a:hover .type__name {
   padding-top: 8px; }
 
 .record--method-get .type__key {
-  border-color: #1E88E5;
-  color: #1E88E5; }
+  border-color: #f99300;
+  color: #f99300; }
 
 .record--method-post .type__key {
   border-color: #009688;
@@ -947,7 +947,7 @@ a:hover .type__name {
   background: #558B2F; }
 
 .status-code--3xx::before {
-  background: #2196F3; }
+  background: #f99300; }
 
 .status-code--4xx::before {
   background: #FB8C00; }
@@ -1076,9 +1076,6 @@ body.annot-hide-proposal .annot-proposal .nav-tree__item__label {
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
   padding: 12px 20px 12px 10px;
   transition: width 0.4s ease-in-out;
   margin-left: 20px;
